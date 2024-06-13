@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    
+    <!--=============== SWIPER CSS ===============--> 
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    
+    <!--=============== CSS ===============--> 
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <title>Registration form</title>
+</head>
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img src="assets/img/logo.png" alt="" class="nav__logo-img">
+                Halloween
+            </a>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#trick" class="nav__link">Campaign</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#new" class="nav__link">New</a>
+                    </li>
+                    <a href="#" class="button button--ghost">Support</a>
+                </ul>
+                
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x'></i>
+                </div>
+                
+                <img src="assets/img/nav-img.png" alt="" class="nav__img">
+            </div>
+            
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-grid-alt'></i>
+            </div>
+        </nav>
+    </header>
+    
+<main > <!-- Adjust margin-top, font-size, and background-color as needed -->
+    <div class="form-container" style="max-width: 400px; margin: 0 auto; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); background-color: inherit;">
+        <h1 style="font-size: 26px; margin-bottom: 20px;">🌟 Register Now 🌟</h1>
+        <form action="#" method="POST">
+            <div style="margin-bottom: 15px;">
+                <input type="text" id="fullname" name="fullname" placeholder="Full Name" style="width: 100%; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <input type="email" id="email" name="email" placeholder="Email Address" style="width: 100%; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number" style="width: 100%; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <select type="text" id="country" name="country" placeholder="country" style="width: 100%; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;">
+                    <option value="Pakistan">Pakistan</option>
+                </select>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <select type="text" id="Provance" name="Provance" placeholder="country" style="width: 100%; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;">
+                    <option value="Sindh">Sindh</option>
+                  <option value="Punjab">Punjab</option>
+                  <option value="Balochistan">Balochistan</option>
+                  <option value="Khyber Pakhtunkhwa">Khyber Pakhtunkhwa</option>
+                  <option value="Gilgit Baltistan">Gilgit Baltistan</option>
+                  <option value="FATA">FATA</option>
+                </select>
+              </div>
+            <div style="margin-bottom: 15px;">
+                <input type="text" id="city" name="city" placeholder="Karachi" style="width: 100%; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
+            <label style="font-size: 14px; margin-bottom: 15px;">
+                <input required type="checkbox" name="terms" value="agree" style="font-size: 14px; margin-right: 5px;">
+                I agree to the <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.
+            </label>
+            <div>
+                <button type="submit" style="background-color: red; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; border-radius: 5px; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='green'" onmouseout="this.style.backgroundColor='red'">Register Now</button>
+            </div>
+        </form>
+        <p style="font-size: 14px; margin-top: 10px;">For more details on how we handle your data and our commitment to transparency, please read our <a href="#" style="text-decoration: underline;">Privacy Policy</a> and <a href="#" style="text-decoration: underline;">Terms of Use</a>.</p>
+    </div>
+</main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">
+                    <img src="assets/img/logo.png" alt="" class="footer__logo-img">
+                    Halloween
+                </a>
+                
+                <p class="footer__description">Enjoy the scariest night <br> of your life.</p>
+                
+                <div class="footer__social">
+                    <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-instagram-alt'></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-twitter'></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer__content">
+                <h3 class="footer__title">About</h3>
+                
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Features</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">News</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="footer__content">
+                <h3 class="footer__title">Our Services</h3>
+                
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Discounts</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Shipping mode</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="footer__content">
+                <h3 class="footer__title">Our Company</h3>
+                
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">About us</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Our mision</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <span class="footer__copy">&#169; Bedimcode. All rights reserved</span>
+        
+        <img src="assets/img/footer1-img.png" alt="" class="footer__img-one">
+        <img src="assets/img/footer2-img.png" alt="" class="footer__img-two">
+    </footer>
+    
+    <!--=============== SCROLL UP ===============-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class='bx bx-up-arrow-alt scrollup__icon'></i>
+    </a>
+    
+    <!--=============== SCROLL REVEAL ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
+    
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
