@@ -175,5 +175,18 @@
     
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
+
+    <script>
+        function enableRegisterButton(checked) {
+            var registerButton = document.getElementById('registerButton');
+            registerButton.disabled = !checked;
+            if (checked) {
+                registerButton.style.backgroundColor = 'red';
+            } else {
+                registerButton.style.backgroundColor = 'gray'; // or any other color to indicate disabled state
+            }
+        }
+    </script>
+
 </body>
 </html>
