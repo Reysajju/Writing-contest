@@ -3,28 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
-    <!-- FAVICON -->
+    
+    <!--=============== FAVICON ===============-->
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
     
-    <!-- BOXICONS -->
+    <!--=============== BOXICONS ===============-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     
-    <!-- SWIPER CSS -->
+    <!--=============== SWIPER CSS ===============--> 
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     
-    <!-- CSS -->
+    <!--=============== CSS ===============--> 
     <link rel="stylesheet" href="assets/css/styles.css">
     
-    <style>
-        /* Additional styles if needed */
-    </style>
+    <title>Registration form</title>
 </head>
 <body>
-    <!-- HEADER -->
+    <!--==================== HEADER ====================-->
     <header class="header" id="header">
-        <!-- Navigation content -->
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img src="assets/img/logo.png" alt="" class="nav__logo-img">
+                Halloween
+            </a>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#trick" class="nav__link">Campaign</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#new" class="nav__link">New</a>
+                    </li>
+                    <a href="#" class="button button--ghost">Support</a>
+                </ul>
+                
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x'></i>
+                </div>
+                
+                <img src="assets/img/nav-img.png" alt="" class="nav__img">
+            </div>
+            
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-grid-alt'></i>
+            </div>
+        </nav>
     </header>
+    
     
     <main style="margin-top: 80px; font-size: 16px;">
         <div class="section__title">
@@ -51,35 +83,97 @@
         </div>
     </main>
     
-    <!-- FOOTER -->
+    <!--==================== FOOTER ====================-->
     <footer class="footer section">
-        <!-- Footer content -->
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">
+                    <img src="assets/img/logo.png" alt="" class="footer__logo-img">
+                    Halloween
+                </a>
+                
+                <p class="footer__description">Enjoy the scariest night <br> of your life.</p>
+                
+                <div class="footer__social">
+                    <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-instagram-alt'></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-twitter'></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer__content">
+                <h3 class="footer__title">About</h3>
+                
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Features</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">News</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="footer__content">
+                <h3 class="footer__title">Our Services</h3>
+                
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Discounts</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Shipping mode</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="footer__content">
+                <h3 class="footer__title">Our Company</h3>
+                
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">About us</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Our mision</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <span class="footer__copy">&#169; Bedimcode. All rights reserved</span>
+        
+        <img src="assets/img/footer1-img.png" alt="" class="footer__img-one">
+        <img src="assets/img/footer2-img.png" alt="" class="footer__img-two">
     </footer>
     
-    <!-- SCROLL UP -->
+    <!--=============== SCROLL UP ===============-->
     <a href="#" class="scrollup" id="scroll-up">
         <i class='bx bx-up-arrow-alt scrollup__icon'></i>
     </a>
     
-    <!-- SCROLL REVEAL -->
+    <!--=============== SCROLL REVEAL ===============-->
     <script src="assets/js/scrollreveal.min.js"></script>
     
-    <!-- SWIPER JS -->
+    <!--=============== SWIPER JS ===============-->
     <script src="assets/js/swiper-bundle.min.js"></script>
     
-    <!-- MAIN JS -->
+    <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
-    
-    <script>
-        function enableRegisterButton(checked) {
-            var registerButton = document.getElementById('registerButton');
-            registerButton.disabled = !checked;
-            if (checked) {
-                registerButton.style.backgroundColor = 'red';
-            } else {
-                registerButton.style.backgroundColor = 'gray'; // or any other color to indicate disabled state
-            }
-        }
-    </script>
 </body>
 </html>
