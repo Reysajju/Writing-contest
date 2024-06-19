@@ -93,26 +93,42 @@ button:hover {
             </div>
         </div>
     </div>
-<script>
-
-// Get elements from DOM
-const counterElement = document.getElementById('counter');
-const donateButton = document.getElementById('donateButton');
-
-let heartsDonated = 0;
-
-// Update the counter display
-function updateCounter() {
-    counterElement.textContent = heartsDonated;
-}
-
-// Event listener for button click
-donateButton.addEventListener('click', function() {
-    heartsDonated++;
-    updateCounter();
-});
-
-
-</script>
+    <script>
+        const counterElement = document.getElementById('counter');
+        const donateButton = document.getElementById('donateButton');
+        
+        // Function to fetch current count from server
+        async function fetchHeartsCount() {
+            try {
+                const response = await fetch('/api/hearts');
+                const data = await response.json();
+                heartsDonated = data.heartsDonated;
+                updateCounter();
+            } catch (error) {
+                console.error('Error fetching hearts count:', error);
+            }
+        }
+        
+        // Function to update the counter display
+        function updateCounter() {
+            counterElement.textContent = heartsDonated;
+        }
+        
+        // Event listener for button click
+        donateButton.addEventListener('click', async function() {
+            try {
+                const response = await fetch('/api/donate', { method: 'POST' });
+                const data = await response.json();
+                heartsDonated = data.heartsDonated;
+                updateCounter();
+            } catch (error) {
+                console.error('Error donating heart:', error);
+            }
+        });
+        
+        // Fetch initial count when the page loads
+        fetchHeartsCount();
+        </script>
+        
 </body>
 </html>
