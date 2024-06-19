@@ -17,7 +17,35 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
-    
+    <style>
+        /* Add any custom CSS here */
+        .team__container {
+            display: grid;
+            gap: 20px;
+        }
+        .team__content {
+            text-align: center;
+        }
+        .team__img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        .team__button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #0073b1;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .team__button:hover {
+            background-color: #005582;
+        }
+    </style>
+
+
     <title>Registration form</title>
 </head>
 <body>
@@ -192,7 +220,7 @@
             <!--==================== Subscribers ====================-->
             <section class="section team" id="team">
                 <h2 class="section__title">Team Members</h2>
-            
+        
                 <div class="team__container container grid">
                     <div class="team__content">
                         <img src="assets/img/team-member1.png" alt="Team Member Image" class="team__img" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2.5s cubic-bezier(0.5, 0, 0, 1) 0.4s, transform 2.5s cubic-bezier(0.5, 0, 0, 1) 0.4s;">
@@ -204,8 +232,6 @@
                     </div>
                 </div>
             </section>
-            
-            
             <!--==================== DISCOUNT ====================-->
             <section class="section discount">
                 <div class="discount__container container grid">
