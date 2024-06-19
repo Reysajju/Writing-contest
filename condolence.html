@@ -78,13 +78,14 @@ button:hover {
     background-color: #c0392b;
 }
 
+
 </style>
 </head>
 <body>
     <div class="container">
         <div class="content">
             <div class="image-container">
-                <img src="assets/img/Muhammad-sajjad-ali.png" alt="late Muhammad Sajjad Ali">
+                <img src="assets/img/Muhammad-sajjad-ali.png" alt="Muhammad Sajjad Ali">
             </div>
             <div class="counter-container">
                 <h2>Hearts Donated:</h2>
@@ -93,42 +94,48 @@ button:hover {
             </div>
         </div>
     </div>
-    <script>
-        const counterElement = document.getElementById('counter');
-        const donateButton = document.getElementById('donateButton');
-        
-        // Function to fetch current count from server
-        async function fetchHeartsCount() {
-            try {
-                const response = await fetch('/api/hearts');
-                const data = await response.json();
-                heartsDonated = data.heartsDonated;
-                updateCounter();
-            } catch (error) {
-                console.error('Error fetching hearts count:', error);
-            }
-        }
-        
-        // Function to update the counter display
-        function updateCounter() {
-            counterElement.textContent = heartsDonated;
-        }
-        
-        // Event listener for button click
-        donateButton.addEventListener('click', async function() {
-            try {
-                const response = await fetch('/api/donate', { method: 'POST' });
-                const data = await response.json();
-                heartsDonated = data.heartsDonated;
-                updateCounter();
-            } catch (error) {
-                console.error('Error donating heart:', error);
-            }
+
+<script>
+
+const counterElement = document.getElementById('counter');
+const donateButton = document.getElementById('donateButton');
+
+let heartsDonated = 0;
+
+// Function to fetch current count from backend
+async function fetchHeartsCount() {
+    try {
+        const response = await fetch('/.netlify/functions/hearts');
+        const data = await response.json();
+        heartsDonated = data.heartsDonated;
+        updateCounter();
+    } catch (error) {
+        console.error('Error fetching hearts count:', error);
+    }
+}
+
+// Function to update the counter display
+function updateCounter() {
+    counterElement.textContent = heartsDonated;
+}
+
+// Event listener for button click
+donateButton.addEventListener('click', async function() {
+    try {
+        const response = await fetch('/.netlify/functions/donate', {
+            method: 'POST',
         });
-        
-        // Fetch initial count when the page loads
-        fetchHeartsCount();
-        </script>
-        
-</body>
+        const data = await response.json();
+        heartsDonated = data.heartsDonated;
+        updateCounter();
+    } catch (error) {
+        console.error('Error donating heart:', error);
+    }
+});
+
+// Fetch initial count when the page loads
+fetchHeartsCount();
+
+
+</script></body>
 </html>
