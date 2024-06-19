@@ -94,25 +94,23 @@ button:hover {
         </div>
     </div>
 <script>
+// Function to handle click event on heart button
+document.getElementById('heartButton').addEventListener('click', function() {
+        // Retrieve current heart count from localStorage or default to 0
+        let currentCount = localStorage.getItem('heartCount') || 0;
+        // Increment the count
+        currentCount++;
+        // Update the localStorage with the new count
+        localStorage.setItem('heartCount', currentCount);
+        // Update the displayed count on the button
+        document.getElementById('heartCount').textContent = currentCount;
+    });
 
-// Get elements from DOM
-const counterElement = document.getElementById('counter');
-const donateButton = document.getElementById('donateButton');
-
-let heartsDonated = 0;
-
-// Update the counter display
-function updateCounter() {
-    counterElement.textContent = heartsDonated;
-}
-
-// Event listener for button click
-donateButton.addEventListener('click', function() {
-    heartsDonated++;
-    updateCounter();
-});
-
-
+    // Load initial heart count on page load
+    window.addEventListener('load', function() {
+        let initialCount = localStorage.getItem('heartCount') || 0;
+        document.getElementById('heartCount').textContent = initialCount;
+    });
 </script>
 </body>
 </html>
